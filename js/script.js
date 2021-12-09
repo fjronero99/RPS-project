@@ -37,15 +37,23 @@ $(".play").click(function(){
 }
  
  $(".shoot").click(function () {
-   if(userInput === ComputerInput) {
-     $("body").css("background-color","green");
+  if (userInput ===  ) {
+     
    } else{
-          $("body").css("background-color","red");
+                   
+          // $(".button-one").click(function() { (use this for actions?)
+    //let userInput_one = $(".answer-one").val();
+    //let userInput_two = $(".answer-two").val();
+    
+    
+});
    }
  })
   
   //text of win or lose
 });
+
+
 
 
 

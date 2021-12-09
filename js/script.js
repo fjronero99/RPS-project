@@ -7,6 +7,22 @@ $(".play").click(function(){
   let userInput= $(".input").val();
   $(".userChoice").text(userInput);
   
+    let userOutput= Math.ceil(Math.random() * 3);
+  //write the numbers as rock paper scissors
+  if(userOutput === 1) {
+    let userInput = "rock;"
+    // (".userChoice").text("rock");
+} else if(userOutput === 2) {
+      let userInput = "paper;"
+    // (".userChoice").text("paper");
+} else if (userOutput === 3) {
+      let userInput = "sicssor;"
+  // (".userChoice").text("scissor")
+}
+  
+  let ComputerInput= $(".input").val();
+  $(".computerChoice").text(ComputerInput);
+  
   let computerOutput= Math.ceil(Math.random() * 3);
   //write the numbers as rock paper scissors
   if(computerOutput === 1) {
@@ -21,7 +37,7 @@ $(".play").click(function(){
 }
  
  $(".shoot").click(function () {
-   if(userInput === computerInput) {
+   if(userInput === ComputerInput) {
      $("body").css("background-color","green");
    } else{
           $("body").css("background-color","red");
@@ -30,6 +46,9 @@ $(".play").click(function(){
   
   //text of win or lose
 });
+
+
+
 
 
 

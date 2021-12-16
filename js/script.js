@@ -1,62 +1,43 @@
 // $(".choices").hide();
+let randomNumber =0; 
+ let computerChoice; 
+let result;
 
-
-$(".play").click(function(){
-  $(".choices").show();
-  
-  let userInput= $(".input").val();
-  $(".userChoice").text(userInput);
-  
-    let userOutput= Math.ceil(Math.random() * 3);
-  //write the numbers as rock paper scissors
-  if(userOutput === 1) {
-    let userInput = "rock;"
-    // (".userChoice").text("rock");
-} else if(userOutput === 2) {
-      let userInput = "paper;"
-    // (".userChoice").text("paper");
-} else if (userOutput === 3) {
-      let userInput = "sicssor;"
-  // (".userChoice").text("scissor")
-}
-  
-  let ComputerInput= $(".input").val();
-  $(".computerChoice").text(ComputerInput);
-  
-  let computerOutput= Math.ceil(Math.random() * 3);
-  //write the numbers as rock paper scissors
-  if(computerOutput === 1) {
-    let ComputerInput = "rock;"
-    // (".computerChoice").text("rock");
-} else if(computerOutput === 2) {
-      let ComputerInput = "paper;"
-    // (".computerChoice").text("paper");
-} else if (computerOutput === 3) {
-      let ComputerInput = "sicssor;"
-  // (".computerChoice").text("scissor")
-}
+$(".play").click(function()
+{ let userChoice= $(".input").val();
+ $(".userChoice").text(userChoice);
+ let randomNumber=Math.ceil(Math.random() * 3);
+ console.log(randomNumber);
+ if(randomNumber===1)
+ { computerChoice = "rock"; $(".computerChoice").text(computerChoice); } 
+ else if(randomNumber===2)
+ { computerChoice = "paper"; $(".computerChoice").text(computerChoice); }
+ else if(randomNumber===3)
+ { computerChoice = "paper"; $(".computerChoice").text(computerChoice); }
  
- $(".shoot").click(function () {
-  if (userInput ===  ) {
-     
-   } else{
-                   
-          // $(".button-one").click(function() { (use this for actions?)
-    //let userInput_one = $(".answer-one").val();
-    //let userInput_two = $(".answer-two").val();
-    
-    
+  if (userChoice === "rock" && computerChoice === "rock") {
+    result = "It's a tie!";
+  } else if (userChoice === "paper" && computerChoice === "rock") {
+    result = "You win!";
+  } else if (userChoice === "scissor" && computerChoice === "rock") {
+    result = "Computer wins!";
+  } else if (userChoice === "rock" && computerChoice === "paper") {
+    result = "Computer wins!";
+  } else if (userChoice === "paper" && computerChoice === "paper") {
+    result = "It's a tie";
+  } else if (userChoice === "scissor" && computerChoice === "paper") {
+    result = "You win!";
+  } else if (userChoice === "rock" && computerChoice === "scissor") {
+    result = "You win!";
+  } else if (userChoice === "paper" && computerChoice === "scissor") {
+    result = "Computer wins!";
+  } else if (userChoice === "scissor" && computerChoice === "scissor") {
+    result = "It's a tie!";
+  }
+  $(".result").text(result);
 });
-   }
- })
-  
+
+
+
+
   //text of win or lose
-});
-
-
-
-
-
-
-
-
